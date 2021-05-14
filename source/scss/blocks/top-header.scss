@@ -1,0 +1,146 @@
+.top-header {
+  padding: 33px 25px 0;
+  display: flex;
+  max-width: 1461px;
+  margin: 0 auto;
+  margin-bottom: 230px;
+  align-items: center;
+}
+
+.top-header__text {
+  margin-right: auto;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-header__text p {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: $white;
+  margin: 0;
+}
+
+.top-header__text span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #788891;
+}
+
+.top-header a {
+  margin-left: 90px;
+  font-family: "PT Mono", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: #9e9e9e;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
+.top-header a svg {
+  fill: $blue;
+}
+
+.top-header a:hover svg,
+.top-header a:focus svg {
+  fill: $blue-hover;
+}
+
+.top-header a:active svg {
+  fill: $blue-active;
+}
+
+.top-header__btn {
+  margin-left: 50px;
+  width: 180px;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: $grey;
+    color: $grey;
+    outline: none;
+  }
+
+  &:active {
+    border-color: $black;
+    color: $black;
+  }
+}
+
+.top-header svg {
+  position: relative;
+  top: 1px;
+  margin-right: 7px;
+}
+
+.top-header img {
+  margin-right: 15px;
+}
+
+@media (max-width: $desktop-width) {
+  .top-header {
+    padding-top: 20px;
+    margin-bottom: 116px;
+  }
+
+  .top-header a {
+    margin-left: 33px;
+  }
+
+  .top-header a span {
+    display: none;
+  }
+
+  .top-header__btn {
+    display: none;
+  }
+
+  .top-header svg {
+    margin-right: 0;
+    height: 26px;
+    width: 26px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .top-header {
+    padding: 17px 15px 0 17px;
+    margin-bottom: 231px;
+  }
+
+  .top-header__text {
+    display: none;
+  }
+
+  .top-header img {
+    width: 38px;
+    height: 38px;
+    margin-right: auto;
+  }
+
+  .top-header a {
+    margin-left: 22px;
+  }
+}

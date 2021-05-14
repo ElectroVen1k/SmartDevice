@@ -1,0 +1,18 @@
+.header {
+  background-color: $dark-blue;
+  min-height: 878px;
+  background-image: url("../..//img/preview-pattern.png");
+  overflow-x: hidden;
+}
+
+@media (max-width: $desktop-width) {
+  .header {
+    min-height: 686px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    min-height: 647px;
+  }
+}
