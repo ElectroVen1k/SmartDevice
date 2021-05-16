@@ -1,0 +1,122 @@
+.footer-sections {
+  margin-left: auto;
+}
+
+.footer-sections p {
+  color: $dark-blue;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.footer-sections__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 236px);
+  column-gap: 70px;
+  margin-bottom: 58px;
+}
+
+.footer-sections__item {
+  font-family: "PT Mono", monospace;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media(max-width: 1200px) {
+  .footer-sections {
+    margin-left: 100px;
+  }
+
+  .footer-sections__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: $desktop-width) {
+  .footer-sections {
+    margin-left: 0;
+    position: relative;
+  }
+
+  .footer-sections p {
+    padding-top: 38px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 200vw;
+      background-color: fade-out(#626962, 0.8);
+      top: 0;
+      left: -100vw;
+    }
+  }
+
+  .footer-sections__list {
+    grid-template-columns: 1fr;
+    margin-bottom: 36px;
+  }
+
+  .footer-sections__item:nth-child(2n) {
+    order: 2;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .footer-sections {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 1px;
+      right: 1px;
+      top: 37px;
+      background-color: #C4C4C4;
+    }
+  }
+
+  .footer-sections p {
+    padding-top: 29px;
+    padding-bottom: 29px;
+    position: relative;
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 200vw;
+      background-color: fade-out(#626962, 0.8);
+      bottom: 0;
+      right: -100vw;
+    }
+  }
+
+  .footer-sections__list {
+    display: none;
+  }
+
+  .footer-sections--opened {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 16px;
+      right: 9px;
+      top: 29px;
+      background-color: #C4C4C4;
+    }
+
+    .footer-sections__list {
+      display: block;
+    }
+  }
+}
+
