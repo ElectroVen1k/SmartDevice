@@ -1,0 +1,147 @@
+.advantage {
+  margin: 0 auto;
+  max-width: 1411px;
+  margin-top: 112px;
+}
+
+.advantage__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding-left: 120px;
+  padding-right: 119px;
+}
+
+.advantage__item {
+  min-height: 299px;
+  max-width: 570px;
+  border: 1px solid #EBEBEB;
+  border-left: 3px solid $blue;
+  padding-left: 42px;
+  position: relative;
+  cursor: pointer;
+}
+
+.advantage__item svg {
+  position: absolute;
+  top: 41px;
+  left: 42px;
+}
+
+.advantage__item h3 {
+  font-size: 24px;
+  line-height: 34px;
+  color: $blue;
+  margin-top: 96px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.advantage__item p {
+  font-family: "PT Mono", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+  margin-top: 14px;
+  max-width: 483px;
+}
+
+.advantage__item:hover {
+  background-color: $blue;
+}
+
+.advantage__item:hover h3,
+.advantage__item:hover p {
+  color: $white;
+}
+
+.advantage__item svg {
+  fill: $blue;
+}
+
+.advantage__item:hover svg {
+  fill: $white;
+}
+
+@media(max-width: $desktop-width) {
+  .advantage {
+    margin-top: 54px;
+  }
+
+  .advantage__list {
+    padding: 0 25px;
+    column-gap: 31px;
+  }
+
+  .advantage__item {
+    min-height: 232px;
+    border-left: 2px solid $blue;
+    padding-left: 25px;
+  }
+
+  .advantage__item h3 {
+    margin-top: 66px;
+  }
+
+  .advantage__item p {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    padding-right: 20px;
+  }
+
+  .advantage__item svg {
+    top: 23px;
+    left: 25px;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .advantage {
+    margin-top: 37px;
+  }
+
+  .advantage__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    padding: 0 15px;
+    row-gap: 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  .advantage__item h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 70px;
+  }
+
+  .advantage__item:nth-child(3) h3 {
+    margin-top: 65px;
+  }
+
+  .advantage__item:nth-child(3) p,
+  .advantage__item:nth-child(4) p {
+    margin-top: 12px;
+  }
+
+  .advantage__item p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 26px;
+    margin-top: 8px;
+    padding-right: 10px;
+  }
+
+  .advantage__item:first-child p,
+  .advantage__item:nth-child(4) p {
+    padding-right: 15px;
+  }
+
+  .advantage__item svg {
+    width: 32px;
+  }
+}

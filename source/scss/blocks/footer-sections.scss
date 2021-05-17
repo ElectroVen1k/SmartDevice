@@ -41,10 +41,6 @@
   .footer-sections {
     margin-left: 0;
     position: relative;
-  }
-
-  .footer-sections p {
-    padding-top: 38px;
 
     &::before {
       content: "";
@@ -55,6 +51,10 @@
       top: 0;
       left: -100vw;
     }
+  }
+
+  .footer-sections p {
+    padding-top: 38px;
   }
 
   .footer-sections__list {
@@ -74,11 +74,11 @@
     &::after {
       content: "";
       position: absolute;
-      width: 16px;
       height: 1px;
-      right: 1px;
-      top: 37px;
-      background-color: #C4C4C4;
+      width: 200vw;
+      background-color: fade-out(#626962, 0.8);
+      bottom: 0;
+      right: -100vw;
     }
   }
 
@@ -91,11 +91,11 @@
     &::after {
       content: "";
       position: absolute;
+      width: 16px;
       height: 1px;
-      width: 200vw;
-      background-color: fade-out(#626962, 0.8);
-      bottom: 0;
-      right: -100vw;
+      right: 1px;
+      top: 37px;
+      background-color: #C4C4C4;
     }
   }
 
@@ -104,14 +104,17 @@
   }
 
   .footer-sections--opened {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 16px;
-      right: 9px;
-      top: 29px;
-      background-color: #C4C4C4;
+
+    .footer-sections p {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 16px;
+        right: 9px;
+        top: 29px;
+        background-color: #C4C4C4;
+      }
     }
 
     .footer-sections__list {
