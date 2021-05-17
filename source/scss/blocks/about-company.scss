@@ -1,0 +1,136 @@
+.about-company {
+  max-width: 1411px;
+  margin: 0 auto;
+  padding: 0 126px;
+  margin-top: 105px;
+  background-image: url("../../img/about-company.png");
+  background-repeat: no-repeat;
+  background-position: 97px 6px;
+  background-size: 216px 315px;
+  min-height: 317px;
+}
+
+.about-company h3,
+.about-company a,
+.about-company p {
+  margin: 0;
+  margin-left: 175px;
+  color: $grey;
+}
+
+.about-company h3 {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin-bottom: 21px;
+}
+
+.about-company p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 21px;
+  font-family: "PT Mono", monospace;
+}
+
+.about-company a {
+  display: flex;
+  width: 180px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: $blue;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  margin-top: 38px;
+  margin-bottom: 15px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $blue-hover;
+    outline: none;
+    color: $blue-hover;
+  }
+
+  &:active {
+    border: 1px solid $blue-active;
+    color: $blue-active;
+    outline: none;
+  }
+}
+
+.about-company span:last-child {
+  display: none;
+}
+
+@media(max-width: $desktop-width) {
+  .about-company {
+    padding: 0 25px;
+    margin-top: 55px;
+    background-position: 0 0;
+    background-size: 245px 362px;
+    min-height: 362px;
+  }
+
+  .about-company h3 {
+    font-size: 32px;
+    line-height: 45px;
+    margin-left: 185px;
+    margin-bottom: 25px;
+  }
+
+  .about-company p {
+    margin-left: 188px;
+  }
+
+  .about-company span {
+    display: none;
+  }
+
+  .about-company span:last-child {
+    display: inline;
+  }
+
+  .about-company a {
+    margin-left: 188px;
+    margin-top: 42px;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .about-company {
+    background-image: none;
+    padding: 0 16px;
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 55px;
+  }
+
+  .about-company h3,
+  .about-company p,
+  .about-company a {
+    margin-left: 0;
+  }
+
+  .about-company h3 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 19px;
+  }
+
+  .about-company p {
+    margin-bottom: 39px;
+    max-width: 511px;
+  }
+
+  .about-company p:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .about-company a {
+    margin-top: 29px;
+  }
+}

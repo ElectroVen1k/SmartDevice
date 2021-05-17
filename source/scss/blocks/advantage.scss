@@ -32,7 +32,7 @@
   left: 42px;
 }
 
-.advantage__item h3 {
+.advantage__item h4 {
   font-size: 24px;
   line-height: 34px;
   color: $blue;
@@ -45,7 +45,7 @@
   font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 22px;
-  color: #666666;
+  color: $grey;
   margin-top: 14px;
   max-width: 483px;
 }
@@ -54,7 +54,7 @@
   background-color: $blue;
 }
 
-.advantage__item:hover h3,
+.advantage__item:hover h4,
 .advantage__item:hover p {
   color: $white;
 }
@@ -83,7 +83,7 @@
     padding-left: 25px;
   }
 
-  .advantage__item h3 {
+  .advantage__item h4 {
     margin-top: 66px;
   }
 
@@ -113,13 +113,13 @@
     margin: 0 auto;
   }
 
-  .advantage__item h3 {
+  .advantage__item h4 {
     font-size: 20px;
     line-height: 28px;
     margin-top: 70px;
   }
 
-  .advantage__item:nth-child(3) h3 {
+  .advantage__item:nth-child(3) h4 {
     margin-top: 65px;
   }
 
