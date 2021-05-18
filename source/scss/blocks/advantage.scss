@@ -19,7 +19,7 @@
 .advantage__item {
   min-height: 299px;
   max-width: 570px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   border-left: 3px solid $blue;
   padding-left: 42px;
   position: relative;
@@ -30,6 +30,7 @@
   position: absolute;
   top: 41px;
   left: 42px;
+  fill: $blue;
 }
 
 .advantage__item h4 {
@@ -59,15 +60,11 @@
   color: $white;
 }
 
-.advantage__item svg {
-  fill: $blue;
-}
-
 .advantage__item:hover svg {
   fill: $white;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .advantage {
     margin-top: 54px;
   }
@@ -99,7 +96,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .advantage {
     margin-top: 37px;
   }

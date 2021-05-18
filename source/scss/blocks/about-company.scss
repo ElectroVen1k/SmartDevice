@@ -66,7 +66,7 @@
   display: none;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .about-company {
     padding: 0 25px;
     margin-top: 55px;
@@ -100,7 +100,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .about-company {
     background-image: none;
     padding: 0 16px;

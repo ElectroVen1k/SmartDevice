@@ -13,15 +13,24 @@
   padding: 0;
   font-size: 15px;
   line-height: 25px;
-  font-family: "PT Mono" ,monospace;
+  font-family: "PT Mono", monospace;
   margin-bottom: 58px;
 }
 
-.footer-contacts__list a {
+.footer-contacts__item a {
   color: fade-out($dark-blue, 0.5);
+
+  &:hover,
+  &:focus {
+    color: #484848;
+  }
+
+  &:active {
+    color: $black;
+  }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .footer-contacts {
     margin-right: 11px;
     position: relative;
@@ -36,7 +45,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .footer-contacts {
     margin-left: 0;
     margin-right: 0;
@@ -49,7 +58,7 @@
       height: 1px;
       right: 1px;
       top: 36px;
-      background-color: #C4C4C4;
+      background-color: #c4c4c4;
     }
   }
 
@@ -76,7 +85,7 @@
       height: 16px;
       right: 9px;
       top: 28px;
-      background-color: #C4C4C4;
+      background-color: #c4c4c4;
     }
   }
 }

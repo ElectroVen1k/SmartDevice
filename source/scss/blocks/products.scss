@@ -7,7 +7,6 @@
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 25px;
-  width: max-content;
   width: 100%;
 }
 
@@ -102,7 +101,7 @@
   background-color: $blue-active;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .products {
     margin-top: 74px;
   }
@@ -135,7 +134,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .products {
     margin-top: 65px;
   }
@@ -161,4 +160,3 @@
     margin-left: 35px;
   }
 }
-

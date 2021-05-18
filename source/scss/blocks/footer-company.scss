@@ -1,6 +1,6 @@
 .footer-company {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 53px;
   min-width: 216px;
 }
 
@@ -11,7 +11,7 @@
 
 .footer-company p {
   margin: 0;
-  color: #203C42;
+  color: #203c42;
   font-size: 25px;
   line-height: 29px;
   font-weight: 700;
@@ -32,7 +32,7 @@
   margin-right: 16px;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .footer-company {
     margin-bottom: 26px;
   }
@@ -42,7 +42,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .footer-company {
     margin: 0 auto;
     margin-bottom: 23px;

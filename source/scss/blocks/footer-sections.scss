@@ -27,7 +27,7 @@
   line-height: 25px;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .footer-sections {
     margin-left: 100px;
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .footer-sections {
     margin-left: 0;
     position: relative;
@@ -67,7 +67,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .footer-sections {
     position: relative;
 
@@ -95,7 +95,7 @@
       height: 1px;
       right: 1px;
       top: 37px;
-      background-color: #C4C4C4;
+      background-color: #c4c4c4;
     }
   }
 
@@ -104,7 +104,6 @@
   }
 
   .footer-sections--opened {
-
     .footer-sections p {
       &::before {
         content: "";
@@ -113,7 +112,7 @@
         height: 16px;
         right: 9px;
         top: 29px;
-        background-color: #C4C4C4;
+        background-color: #c4c4c4;
       }
     }
 
@@ -122,4 +121,3 @@
     }
   }
 }
-

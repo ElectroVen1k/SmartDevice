@@ -1,7 +1,6 @@
 .footer {
-  margin-top: auto;
   color: fade-out($dark-blue, 0.5);
-  margin: 0 auto;
+  margin: auto auto 0;
   padding-top: 65px;
   max-width: 1464px;
   width: 100%;
@@ -47,7 +46,7 @@
   }
 }
 
-.footer__copyright p{
+.footer__copyright p {
   text-align: end;
 }
 
@@ -66,14 +65,14 @@
 .footer__law p {
   margin: 0;
   padding: 14px 0;
-  font-family:"PT Mono", monospace;
+  font-family: "PT Mono", monospace;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .footer__confidentiality {
     max-width: 240px;
     margin-left: auto;
@@ -84,7 +83,7 @@
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .footer {
     padding-top: 19px;
   }
@@ -133,13 +132,14 @@
     padding-bottom: 24px;
     text-align: left;
   }
+
   .footer__copyright p {
     padding-top: 21px;
     padding-bottom: 24px;
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .footer {
     padding-top: 46px;
   }
