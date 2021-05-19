@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/" as="font">
+    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font">
     <title></title>
   </head>
   <body class="body">
@@ -77,13 +77,13 @@
           </svg>
           <span>+7 (495) 000 52 52</span>
         </a>
-        <a href="#feedback" class="top-header__btn" type="button">Заказать звонок</a>
+        <button type="button" class="top-header__btn" type="button">Заказать звонок</button>
       </div>
       <section class="preview">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="preview__btn" type="button">Получить бесплатную консультацию</button>
-        <button class="preview__btn preview__btn--mobile" type="button">Бесплатная консультация</button>
+        <a href="#feedback" class="preview__btn" type="button">Получить бесплатную консультацию</a>
+        <a href="#feedback" class="preview__btn preview__btn--mobile" type="button">Бесплатная консультация</a>
         <div class="preview__scroll">
           <a href="#advantage">Скролл вниз</a>
         </div>
@@ -165,7 +165,7 @@
             <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
               <input type="text" id="name" name="Имя пользователя" required placeholder="Имя">
               <label for="name" class="visually-hidden">Имя</label>
-              <input type="tel" id="phone" name="Телефон" required placeholder="Телефон" data-mask="+7 (999) 999 99 99">
+              <input type="tel" id="phone" name="Телефон" required placeholder="Телефон">
               <label for="phone" class="visually-hidden">Телефон</label>
               <textarea name="вопрос" id="question" placeholder="Ваш вопрос" required></textarea>
               <label for="question" class="visually-hidden"></label>
@@ -268,6 +268,25 @@
         </div>
       </div>
     </footer>
+    <div class="feedback-popup">
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="feedback-popup__form" action="https://echo.htmlacademy.ru/" method="post">
+        <input type="text" id="popup-name" name="Имя пользователя" required placeholder="Имя">
+        <label for="popup-name" class="visually-hidden">Имя</label>
+        <input type="tel" id="popup-phone" name="Телефон" required placeholder="Телефон">
+        <label for="popup-phone" class="visually-hidden">Телефон</label>
+        <textarea name="вопрос" id="popup-question" placeholder="Ваш вопрос" required></textarea>
+        <label for="popup-question" class="visually-hidden"></label>
+        <div class="feedback-popup__confidentiality">
+          <input class="visually-hidden" type="checkbox" id="popup-confidentiality" name="Согласен на обработку данных" checked required>
+          <label for="popup-confidentiality">Я согласен на обработку  персональных данных</label>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button" aria-label="Закрыть форму"></button>
+    </div>
+    <div class="body__overlay"></div>
     <script src="js/main.js"></script>
   </body>
 </html>
