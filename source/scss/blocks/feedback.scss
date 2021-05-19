@@ -15,7 +15,7 @@
     width: 686px;
     height: 641px;
     position: absolute;
-    background-image: url("../../img/paperplane.png");
+    background-image: url("../img/paperplane.png");
     background-repeat: no-repeat;
     top: -60px;
     right: 865px;
@@ -26,7 +26,7 @@
     width: 509px;
     height: 670px;
     position: absolute;
-    background-image: url("../../img/triangles.png");
+    background-image: url("../img/triangles.png");
     background-repeat: no-repeat;
     top: 35px;
     left: 1361px;
@@ -73,7 +73,7 @@
   font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 22px;
-  color: $white;
+  color: fade-out($black, 0.4);
   padding-left: 17px;
   cursor: pointer;
 
@@ -102,8 +102,8 @@
   border: none;
   font-family: "PT Mono", monospace;
   font-size: 16px;
+  color: fade-out($black, 0.4);
   line-height: 22px;
-  color: $white;
   padding-left: 17px;
   padding-top: 12px;
   margin-bottom: 43px;
@@ -132,6 +132,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   line-height: 16px;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-right: 45px;
@@ -160,6 +161,7 @@
   margin-top: 10px;
   width: 220px;
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   margin-left: 25px;
 
@@ -179,7 +181,7 @@
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/tick.svg");
+  background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   top: 5px;
   left: -28px;

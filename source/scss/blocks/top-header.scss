@@ -47,6 +47,11 @@
   }
 }
 
+.top-header a:first-child {
+  display: flex;
+  margin: 0;
+}
+
 .top-header a svg {
   fill: $blue;
 }

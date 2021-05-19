@@ -83,6 +83,7 @@
   }
 
   .footer-sections p {
+    cursor: pointer;
     padding-top: 29px;
     padding-bottom: 29px;
     position: relative;
@@ -97,6 +98,16 @@
       top: 37px;
       background-color: #c4c4c4;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 16px;
+      right: 9px;
+      top: 29px;
+      background-color: #c4c4c4;
+    }
   }
 
   .footer-sections__list {
@@ -104,16 +115,8 @@
   }
 
   .footer-sections--opened {
-    .footer-sections p {
-      &::before {
-        content: "";
-        position: absolute;
-        width: 1px;
-        height: 16px;
-        right: 9px;
-        top: 29px;
-        background-color: #c4c4c4;
-      }
+    p::before {
+      display: none;
     }
 
     .footer-sections__list {

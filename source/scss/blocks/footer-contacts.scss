@@ -51,7 +51,7 @@
     margin-right: 0;
     position: relative;
 
-    &::after {
+    p::after {
       content: "";
       position: absolute;
       width: 16px;
@@ -64,19 +64,9 @@
 
   .footer-contacts p {
     padding-top: 29px;
-    margin-bottom: 31px;
-  }
-
-  .footer-contacts__list {
-    margin-bottom: 26px;
-    margin-right: 10px;
-    display: none;
-  }
-
-  .footer-contacts--opened {
-    .footer-contacts__list {
-      display: block;
-    }
+    padding-bottom: 31px;
+    margin-bottom: 0;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -86,6 +76,23 @@
       right: 9px;
       top: 28px;
       background-color: #c4c4c4;
+    }
+  }
+
+  .footer-contacts__list {
+    margin-bottom: 26px;
+    margin-right: 10px;
+    margin-top: 0;
+    display: none;
+  }
+
+  .footer-contacts--opened {
+    .footer-contacts__list {
+      display: block;
+    }
+
+    p::before {
+      display: none;
     }
   }
 }

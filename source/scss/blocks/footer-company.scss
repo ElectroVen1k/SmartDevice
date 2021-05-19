@@ -24,12 +24,17 @@
   line-height: 14px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  color: #788891;
 }
 
 .footer-company img {
   height: 52px;
   width: 52px;
   margin-right: 16px;
+}
+
+.footer-company a {
+  display: flex;
 }
 
 @media (max-width: $desktop-width) {
