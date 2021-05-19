@@ -6,6 +6,7 @@
   var popupOpenButton = document.querySelector('.top-header__btn');
   var popupCloseButton = document.querySelector('.feedback-popup > button');
   var feedbackPopup = document.querySelector('.feedback-popup');
+  var bodyElement = document.querySelector('.body');
   var overlay = document.querySelector('.body__overlay');
 
   // Accordion
@@ -48,6 +49,7 @@
   var openPopup = function() {
     feedbackPopup.classList.add('feedback-popup--opened');
     overlay.classList.add('body__overlay--opened');
+    bodyElement.classList.add('body--noscroll');
     document.addEventListener('keydown', onESCPress);
     overlay.addEventListener('click', closePopup);
   };
@@ -55,6 +57,7 @@
   var closePopup = function() {
     feedbackPopup.classList.remove('feedback-popup--opened');
     overlay.classList.remove('body__overlay--opened');
+    bodyElement.classList.remove('body--noscroll');
     document.removeEventListener('keydown', onESCPress);
     overlay.removeEventListener('click', closePopup);
   };
