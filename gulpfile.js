@@ -80,7 +80,7 @@ exports.copy = copy;
 
 // Images
 const convertWebp = () => {
-  return gulp.src("source/img/content/**/*.{png,jpg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp())
     .pipe(gulp.dest("build/img"));
 };
