@@ -8,6 +8,7 @@
   var feedbackPopup = document.querySelector('.feedback-popup');
   var bodyElement = document.querySelector('.body');
   var overlay = document.querySelector('.body__overlay');
+  var nameInput = document.querySelector('.feedback-popup__form #popup-name');
 
   // Accordion
 
@@ -52,6 +53,7 @@
     bodyElement.classList.add('body--noscroll');
     document.addEventListener('keydown', onESCPress);
     overlay.addEventListener('click', closePopup);
+    nameInput.focus();
   };
 
   var closePopup = function() {

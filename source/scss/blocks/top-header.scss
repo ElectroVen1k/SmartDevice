@@ -151,4 +151,8 @@
   .top-header a {
     margin-left: 22px;
   }
+
+  .top-header a:first-child {
+    margin-right: auto;
+  }
 }

@@ -10,7 +10,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 29px;
   row-gap: 30px;
   padding-left: 120px;
   padding-right: 119px;
@@ -71,7 +71,7 @@
 
   .advantage__list {
     padding: 0 25px;
-    column-gap: 31px;
+    column-gap: 30px;
   }
 
   .advantage__item {
@@ -104,7 +104,7 @@
   .advantage__list {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr auto;
-    padding: 0 15px;
+    padding: 0 16px 0 14px;
     row-gap: 20px;
     max-width: fit-content;
     margin: 0 auto;
@@ -116,26 +116,16 @@
     margin-top: 70px;
   }
 
-  .advantage__item:nth-child(3) h4 {
-    margin-top: 65px;
-  }
-
-  .advantage__item:nth-child(3) p,
-  .advantage__item:nth-child(4) p {
-    margin-top: 12px;
-  }
-
   .advantage__item p {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 26px;
     margin-top: 8px;
-    padding-right: 10px;
+    padding-right: 15px;
   }
 
-  .advantage__item:first-child p,
-  .advantage__item:nth-child(4) p {
-    padding-right: 15px;
+  .advantage__item--delivery p {
+    padding-right: 10px;
   }
 
   .advantage__item svg {

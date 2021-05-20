@@ -27,6 +27,22 @@
   line-height: 25px;
 }
 
+.footer-sections__item a {
+  font-family: "PT Mono", monospace;
+  font-size: 15px;
+  line-height: 25px;
+  color: fade-out($dark-blue, 0.5);
+
+  &:hover,
+  &:focus {
+    color: #484848;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
 @media (max-width: 1200px) {
   .footer-sections {
     margin-left: 100px;
