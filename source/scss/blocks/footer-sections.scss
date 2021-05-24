@@ -126,6 +126,13 @@
     }
   }
 
+  .footer-sections--no-js p {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
   .footer-sections__list {
     display: none;
   }

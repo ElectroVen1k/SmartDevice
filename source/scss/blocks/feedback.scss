@@ -2,6 +2,20 @@
   background-color: $blue;
   min-height: 670px;
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 36vw;
+    height: 647px;
+    position: absolute;
+    background-image: url("../img/paperplane.png");
+    background-repeat: no-repeat;
+    background-size: 36vw auto;
+    background-position: center center;
+    top: -63px;
+    left: 9vw;
+  }
 }
 
 .feedback__wrapper {
@@ -11,17 +25,6 @@
   position: relative;
 
   &::after {
-    content: "";
-    width: 686px;
-    height: 641px;
-    position: absolute;
-    background-image: url("../img/paperplane.png");
-    background-repeat: no-repeat;
-    top: -60px;
-    right: 865px;
-  }
-
-  &::before {
     content: "";
     width: 509px;
     height: 670px;
@@ -76,6 +79,7 @@
   color: fade-out($black, 0.4);
   padding-left: 17px;
   cursor: pointer;
+  border-radius: 0;
 
   &::placeholder {
     color: $white;
@@ -108,6 +112,7 @@
   padding-top: 12px;
   margin-bottom: 43px;
   cursor: pointer;
+  border-radius: 0;
 
   &::placeholder {
     color: $white;
@@ -164,6 +169,7 @@
   vertical-align: baseline;
   position: relative;
   margin-left: 25px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -194,9 +200,34 @@
   border: 1px solid fade-out($black, 0.7);
 }
 
+@media (max-width: 1400px) {
+  .feedback::before {
+    left: 5vw;
+    background-size: 33vw auto;
+  }
+}
+
+@media (max-width: 1250px) {
+  .feedback::before {
+    left: -4vw;
+    background-size: 25vw auto;
+  }
+}
+
+@media (min-width: 1950px) {
+  .feedback::before {
+    left: calc(50% - 850px);
+    background-size: 676px auto;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .feedback {
     min-height: 664px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .feedback__wrapper::before,

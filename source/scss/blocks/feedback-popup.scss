@@ -52,6 +52,7 @@
   line-height: 22px;
   color: fade-out($black, 0.4);
   cursor: pointer;
+  border-radius: 0;
 
   &::placeholder {
     font-family: "PT Mono", monospace;
@@ -80,6 +81,7 @@
   padding-top: 12px;
   margin-bottom: 30px;
   cursor: pointer;
+  border-radius: 0;
 
   &::placeholder {
     color: $white;
@@ -110,6 +112,7 @@
   display: inline-block;
   vertical-align: baseline;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";

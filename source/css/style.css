@@ -255,13 +255,22 @@ a {
   max-width: 1461px;
   margin: 0 auto;
   margin-bottom: 230px;
-  align-items: center; }
+  align-items: flex-start;
+  position: relative;
+  z-index: 2; }
+
+.top-header a {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0; }
 
 .top-header__text {
   margin-right: auto;
   margin-top: 6px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  min-width: 134px;
+  flex-shrink: 0; }
 
 .top-header__text p {
   font-weight: 700;
@@ -277,20 +286,32 @@ a {
   font-family: "Roboto", sans-serif;
   color: #788891; }
 
-.top-header a {
+.top-header__list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-grow: 1; }
+
+.top-header__item {
+  text-align: end;
+  min-width: 210px;
+  height: 50px;
+  align-items: center;
+  display: flex; }
+
+.top-header__item a {
   margin-left: 90px;
   font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 18px;
-  color: #ffffff; }
-  .top-header a:hover, .top-header a:focus {
+  color: #ffffff;
+  display: block; }
+  .top-header__item a:hover, .top-header__item a:focus {
     color: #9e9e9e; }
-  .top-header a:active {
+  .top-header__item a:active {
     color: #000000; }
-
-.top-header a:first-child {
-  display: flex;
-  margin: 0; }
 
 .top-header a svg {
   fill: #00b2ff; }
@@ -304,6 +325,8 @@ a {
 
 .top-header__btn {
   margin-left: 50px;
+  margin-top: 4px;
+  flex-shrink: 0;
   width: 180px;
   height: 45px;
   background-color: transparent;
@@ -340,8 +363,12 @@ a {
   .top-header {
     padding-top: 20px;
     margin-bottom: 116px; }
-  .top-header a {
-    margin-left: 33px; }
+  .top-header__item {
+    min-width: 0; }
+  .top-header a:first-of-type {
+    margin-left: 0; }
+  .top-header__item {
+    margin-left: 32px; }
   .top-header a span {
     display: none; }
   .top-header__btn {
@@ -354,7 +381,8 @@ a {
 @media (max-width: 767px) {
   .top-header {
     padding: 17px 15px 0 17px;
-    margin-bottom: 231px; }
+    margin-bottom: 231px;
+    align-items: center; }
   .top-header__text {
     display: none; }
   .top-header img {
@@ -364,7 +392,10 @@ a {
   .top-header a {
     margin-left: 22px; }
   .top-header a:first-child {
-    margin-right: auto; } }
+    margin-right: auto; }
+  .top-header__item {
+    margin-left: 22px;
+    height: auto; } }
 
 .preview {
   max-width: 1461px;
@@ -720,6 +751,8 @@ a {
       right: 9px;
       top: 29px;
       background-color: #c4c4c4; }
+  .footer-sections--no-js p::after, .footer-sections--no-js p::before {
+    display: none; }
   .footer-sections__list {
     display: none; }
   .footer-sections--opened p::before {
@@ -786,6 +819,8 @@ a {
       right: 9px;
       top: 28px;
       background-color: #c4c4c4; }
+  .footer-contacts--no-js p::after, .footer-contacts--no-js p::before {
+    display: none; }
   .footer-contacts__list {
     margin-bottom: 26px;
     margin-right: 10px;
@@ -819,8 +854,7 @@ a {
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff;
   padding-left: 42px;
-  position: relative;
-  cursor: pointer; }
+  position: relative; }
 
 .advantage__item svg {
   position: absolute;
@@ -1140,7 +1174,19 @@ a {
 .feedback {
   background-color: #00b2ff;
   min-height: 670px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .feedback::before {
+    content: "";
+    width: 36vw;
+    height: 647px;
+    position: absolute;
+    background-image: url("../img/paperplane.png");
+    background-repeat: no-repeat;
+    background-size: 36vw auto;
+    background-position: center center;
+    top: -63px;
+    left: 9vw; }
 
 .feedback__wrapper {
   max-width: 1531px;
@@ -1148,15 +1194,6 @@ a {
   padding: 0 60px;
   position: relative; }
   .feedback__wrapper::after {
-    content: "";
-    width: 686px;
-    height: 641px;
-    position: absolute;
-    background-image: url("../img/paperplane.png");
-    background-repeat: no-repeat;
-    top: -60px;
-    right: 865px; }
-  .feedback__wrapper::before {
     content: "";
     width: 509px;
     height: 670px;
@@ -1204,7 +1241,8 @@ a {
   line-height: 22px;
   color: rgba(0, 0, 0, 0.6);
   padding-left: 17px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .feedback__form input::-moz-placeholder {
     color: #ffffff;
     font-family: "PT Mono", monospace;
@@ -1234,7 +1272,8 @@ a {
   padding-left: 17px;
   padding-top: 12px;
   margin-bottom: 43px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .feedback__form textarea::-moz-placeholder {
     color: #ffffff;
     font-family: "PT Mono", monospace;
@@ -1282,7 +1321,8 @@ a {
   display: inline-block;
   vertical-align: baseline;
   position: relative;
-  margin-left: 25px; }
+  margin-left: 25px;
+  cursor: pointer; }
   .feedback__confidentiality label::before {
     content: "";
     width: 16px;
@@ -1308,9 +1348,26 @@ a {
 .feedback__confidentiality input:hover + label::before {
   border: 1px solid rgba(0, 0, 0, 0.3); }
 
+@media (max-width: 1400px) {
+  .feedback::before {
+    left: 5vw;
+    background-size: 33vw auto; } }
+
+@media (max-width: 1250px) {
+  .feedback::before {
+    left: -4vw;
+    background-size: 25vw auto; } }
+
+@media (min-width: 1950px) {
+  .feedback::before {
+    left: calc(50% - 850px);
+    background-size: 676px auto; } }
+
 @media (max-width: 1023px) {
   .feedback {
     min-height: 664px; }
+    .feedback::before {
+      display: none; }
   .feedback__wrapper::before,
   .feedback__wrapper::after {
     display: none; }
@@ -1409,7 +1466,8 @@ a {
   font-size: 16px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.6);
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .feedback-popup input::-moz-placeholder {
     font-family: "PT Mono", monospace;
     font-size: 16px;
@@ -1436,7 +1494,8 @@ a {
   padding-left: 24px;
   padding-top: 12px;
   margin-bottom: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .feedback-popup textarea::-moz-placeholder {
     color: #ffffff;
     font-family: "PT Mono", monospace;
@@ -1464,7 +1523,8 @@ a {
   width: 330px;
   display: inline-block;
   vertical-align: baseline;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .feedback-popup__confidentiality label::before {
     content: "";
     width: 16px;

@@ -1,8 +1,10 @@
 (function() {
   var sectionsList = document.querySelector('.footer-sections');
   var sectionsButton = document.querySelector('.footer-sections p');
+  var sectionsBlock = document.querySelector('.footer-sections');
   var contactsList = document.querySelector('.footer-contacts');
   var contactsButton = document.querySelector('.footer-contacts p');
+  var contactsBlock = document.querySelector('.footer-contacts');
   var popupOpenButton = document.querySelector('.top-header__btn');
   var popupCloseButton = document.querySelector('.feedback-popup > button');
   var feedbackPopup = document.querySelector('.feedback-popup');
@@ -15,6 +17,8 @@
   window.onload = function() {
     sectionsList.classList.remove('footer-sections--opened');
     contactsList.classList.remove('footer-contacts--opened');
+    sectionsBlock.classList.remove('footer-sections--no-js');
+    contactsBlock.classList.remove('footer-contacts--no-js');
   };
 
   var closeSections = function () {
@@ -114,22 +118,12 @@
         return;
       }
 
-      if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
-        if (inputNumbersValue[0] == '9') inputNumbersValue = '7' + inputNumbersValue;
+      if (inputNumbersValue[0] > -1) {
+        var firstSymbols = '+7 (';
 
-        if (inputNumbersValue[0] == '8') {
-          var firstSymbols = '8';
-          input.setAttribute('pattern', '.{17,17}');
-          input.setAttribute('maxlength', '17');
-        } else {
-          firstSymbols = '+7';
-          input.setAttribute('pattern', '.{18,18}');
-          input.setAttribute('maxlength', '18');
-        }
-
-        formattedInputValue = input.value = firstSymbols + ' ';
+        formattedInputValue = input.value = firstSymbols;
         if (inputNumbersValue.length > 1) {
-          formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+          formattedInputValue += inputNumbersValue.substring(1, 4);
         }
         if (inputNumbersValue.length >= 5) {
           formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
@@ -140,18 +134,8 @@
         if (inputNumbersValue.length >= 10) {
           formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
         }
-      } else {
-        formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
       }
       input.value = formattedInputValue;
-    };
-
-    var onPhoneKeyDown = function (e) {
-      // Clear input after remove last symbol
-      var inputValue = e.target.value.replace(/\D/g, '');
-      if (e.keyCode == 8 && inputValue.length == 1) {
-        e.target.value = '';
-      }
     };
 
     var onPhoneInputFocus = function (e) {
@@ -173,7 +157,6 @@
     };
 
     for (var phoneInput of phoneInputs) {
-      phoneInput.addEventListener('keydown', onPhoneKeyDown);
       phoneInput.addEventListener('input', onPhoneInput, false);
       phoneInput.addEventListener('paste', onPhonePaste, false);
       phoneInput.addEventListener('focus', onPhoneInputFocus);

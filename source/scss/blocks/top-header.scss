@@ -4,7 +4,15 @@
   max-width: 1461px;
   margin: 0 auto;
   margin-bottom: 230px;
-  align-items: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.top-header a {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 .top-header__text {
@@ -12,6 +20,8 @@
   margin-top: 6px;
   display: flex;
   flex-direction: column;
+  min-width: 134px;
+  flex-shrink: 0;
 }
 
 .top-header__text p {
@@ -30,12 +40,30 @@
   color: #788891;
 }
 
-.top-header a {
+.top-header__list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.top-header__item {
+  text-align: end;
+  min-width: 210px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+
+.top-header__item a {
   margin-left: 90px;
   font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  display: block;
 
   &:hover,
   &:focus {
@@ -45,11 +73,6 @@
   &:active {
     color: $black;
   }
-}
-
-.top-header a:first-child {
-  display: flex;
-  margin: 0;
 }
 
 .top-header a svg {
@@ -67,6 +90,8 @@
 
 .top-header__btn {
   margin-left: 50px;
+  margin-top: 4px;
+  flex-shrink: 0;
   width: 180px;
   height: 45px;
   background-color: transparent;
@@ -113,8 +138,13 @@
     margin-bottom: 116px;
   }
 
-  .top-header a {
-    margin-left: 33px;
+  .top-header__item {
+    min-width: 0;
+    margin-left: 32px;
+  }
+
+  .top-header a:first-of-type {
+    margin-left: 0;
   }
 
   .top-header a span {
@@ -136,6 +166,7 @@
   .top-header {
     padding: 17px 15px 0 17px;
     margin-bottom: 231px;
+    align-items: center;
   }
 
   .top-header__text {
@@ -154,5 +185,10 @@
 
   .top-header a:first-child {
     margin-right: auto;
+  }
+
+  .top-header__item {
+    margin-left: 22px;
+    height: auto;
   }
 }

@@ -79,6 +79,13 @@
     }
   }
 
+  .footer-contacts--no-js p {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
   .footer-contacts__list {
     margin-bottom: 26px;
     margin-right: 10px;
