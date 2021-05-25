@@ -289,6 +289,7 @@ a {
 .top-header__list {
   list-style: none;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -302,7 +303,8 @@ a {
   display: flex; }
 
 .top-header__item a {
-  margin-left: 90px;
+  margin-left: 45px;
+  margin-right: 45px;
   font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 18px;
@@ -324,7 +326,7 @@ a {
   fill: #1a02b1; }
 
 .top-header__btn {
-  margin-left: 50px;
+  margin-left: 5px;
   margin-top: 4px;
   flex-shrink: 0;
   width: 180px;
@@ -366,6 +368,8 @@ a {
   .top-header__item {
     min-width: 0;
     margin-left: 32px; }
+  .top-header__item a {
+    margin-right: 0; }
   .top-header a:first-of-type {
     margin-left: 0; }
   .top-header a span {
